@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <div class="card">
+        <div class="d-flex justify-content-between p-3">
+            <div class="image">
+                <img src="https://img.icons8.com/color/96/000000/angularjs.png" alt="logo" width="90">
+            </div>
+            <div class="quiz-header">
+                <h4 style="font-family: cursive;">General Knowledge Quiz!</h4>
+                <span style="font-style: italic;">Welcome {{name}}</span>
+            </div>
+        </div>
+        <div class="d-flex justify-content-between p-3">
+            <div class="score">
+                <h5>{{points}}Points</h5>
+            </div>
+            <div class="question-remain">
+                <span style="font-style: italic;">Question {{currentQuestion+1}} of {{questionList.length}}</span>
+            </div>
+        </div><br><br>
+        <div class="question" >
+            <div class="card">
+                <h3>{{questionList[currentQuestion]?.questionText}}</h3>
+            </div>
+        </div>
+        <div class="options">
+            <ol *ngFor="let option of questionList[currentQuestion]?.options">
+                <li (click)="answer(option)">
+                    <div appChangeBg [isCorrect]="option.correct" class="card">
+                        {{option.opt}}
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div class="d-flex justify-content-between">
+            <button class="btn" [disabled]="currentQuestion===0"  (click)="previousQuestion()"><i class="fa text-primary fa-chevron-left fa-3x" aria-hidden="true"></i></button>
+            <button class="btn btn-primary" [disabled]="currentQuestion!=4" routerLink="/result">View result</button>
+            <button class="btn" [disabled]="currentQuestion===4" (click)="nextQuestion()"><i class="fa text-primary fa-chevron-right fa-3x" aria-hidden="true"></i></button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+{
+    "questions": [
+        {
+         "questionText": "1. Which is the tallest mountain in the world?",
+         "options": [{"opt": "Mount fuji"},{"opt": "Mount Everest", "correct":true},{ "opt": "Denali"}]
+        },
+        {
+            "questionText": "2. Which continent is known as 'Dark' continent?",
+            "options": [{"opt": "Africa","correct":true},{"opt": "Asia"},{ "opt": "Amarica"}]
+        },
+        {
+            "questionText": "3. Which is the most sensitive organ in our body?",
+            "options": [{"opt": "Skin","correct":true},{"opt": "Toungue"},{ "opt": "Eye"}]
+        },
+        {
+            "questionText": "4. Which is the largest ocean in the world?",
+            "options": [{"opt": "Indian ocean"},{"opt": "Antarctic ocean"},{ "opt": "Pacific Ocean","correct":true}]
+        },
+        {
+            "questionText": "5. How many players are there in a cricket team?",
+            "options": [{"opt": "11","correct":true},{"opt": "12"},{ "opt": "9"}]
+        }
+    ]
+}
